@@ -16,7 +16,7 @@
 
 FROM --platform=${BUILDPLATFORM} busybox:1.36.1-uclibc AS busybox
 # Build the binary
-FROM --platform=${BUILDPLATFORM} docker.io/golang:1.19 AS builder
+FROM --platform=${BUILDPLATFORM} docker.io/golang:1.19-bullseye AS builder
 WORKDIR /workspace
 
 # Install dependencies.
