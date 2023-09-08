@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+FROM --platform=${BUILDPLATFORM} busybox:1.36.1-uclibc AS busybox
 # Build the binary
 FROM --platform=${BUILDPLATFORM} docker.io/golang:1.19 AS builder
 WORKDIR /workspace
@@ -58,6 +59,7 @@ COPY --from=builder /etc/ssl/certs /etc/ssl/certs
 COPY --from=builder workspace/bin/kcp-front-proxy workspace/bin/kcp workspace/bin/virtual-workspaces /
 COPY --from=builder workspace/bin/kubectl-* /usr/local/bin/
 COPY --from=builder workspace/bin/kubectl /usr/local/bin/
+COPY --from=busybox /bin/busybox /busybox/busybox
 ENV KUBECONFIG=/etc/kcp/config/admin.kubeconfig
 # Use uid of nonroot user (65532) because kubernetes expects numeric user when applying pod security policies
 RUN ["/busybox/sh", "-c", "mkdir -p /data && chown 65532:65532 /data"]
