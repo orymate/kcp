@@ -201,4 +201,5 @@ replace (
 	k8s.io/sample-apiserver => github.com/kcp-dev/kubernetes/staging/src/k8s.io/sample-apiserver v0.0.0-20230526104423-c790f4246d25
 	k8s.io/sample-cli-plugin => github.com/kcp-dev/kubernetes/staging/src/k8s.io/sample-cli-plugin v0.0.0-20230526104423-c790f4246d25
 	k8s.io/sample-controller => github.com/kcp-dev/kubernetes/staging/src/k8s.io/sample-controller v0.0.0-20230526104423-c790f4246d25
+	go.etcd.io/etcd/server/v3 v3.5.9 => github.com/orymate/etcd/server/v3 v3.5.9-axo
 )
