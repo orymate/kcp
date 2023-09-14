@@ -105,6 +105,3 @@ require (
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.36 // indirect
 	sigs.k8s.io/json v0.0.0-20220713155537-f223a00ba0e2 // indirect
 )
-
-replace go.etcd.io/etcd/client/pkg/v3 => github.com/orymate/etcd/client/pkg/v3 v3.0.0-20230912164933-621e074bb010
-replace go.etcd.io/etcd/server/v3 => github.com/orymate/etcd/server/v3 v3.0.0-20230912164933-621e074bb010
