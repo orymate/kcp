@@ -29,6 +29,7 @@ require (
 	go.etcd.io/etcd/client/pkg/v3 v3.5.9
 	go.etcd.io/etcd/server/v3 v3.5.9
 	go.uber.org/multierr v1.7.0
+	go.uber.org/zap v1.19.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v3 v3.0.1
 	k8s.io/api v0.26.3
@@ -118,7 +119,6 @@ require (
 	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 // indirect
 	go.etcd.io/bbolt v1.3.7 // indirect
 	go.etcd.io/etcd/api/v3 v3.5.9 // indirect
-	go.etcd.io/etcd/client/v2 v2.305.9 // indirect
 	go.etcd.io/etcd/client/v3 v3.5.9 // indirect
 	go.etcd.io/etcd/pkg/v3 v3.5.9 // indirect
 	go.etcd.io/etcd/raft/v3 v3.5.9 // indirect
@@ -134,7 +134,6 @@ require (
 	go.opentelemetry.io/proto/otlp v0.19.0 // indirect
 	go.starlark.net v0.0.0-20200306205701-8dd3e2ee1dd5 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
-	go.uber.org/zap v1.19.0 // indirect
 	golang.org/x/crypto v0.1.0 // indirect
 	golang.org/x/mod v0.9.0 // indirect
 	golang.org/x/net v0.9.0 // indirect
@@ -202,3 +201,5 @@ replace (
 	k8s.io/sample-cli-plugin => github.com/kcp-dev/kubernetes/staging/src/k8s.io/sample-cli-plugin v0.0.0-20230526104423-c790f4246d25
 	k8s.io/sample-controller => github.com/kcp-dev/kubernetes/staging/src/k8s.io/sample-controller v0.0.0-20230526104423-c790f4246d25
 )
+
+replace go.etcd.io/etcd/server/v3 => github.com/orymate/etcd/server/v3 v3.0.0-20230914151546-67c9671cf89b
